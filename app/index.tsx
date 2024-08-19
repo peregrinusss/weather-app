@@ -18,7 +18,7 @@ import { debounce } from "lodash";
 import { fetchLocations } from "../api/weather";
 
 const RootLayout = () => {
-  const [locations, setLocations] = useState([1,2,3]);
+  const [locations, setLocations] = useState([]);
 
   const handleLocation = (location: string) => {
     console.log(location);
@@ -68,7 +68,7 @@ const RootLayout = () => {
                     : "";
                   return (
                     <TouchableOpacity
-                      onPress={() => handleLocation(location.toString())}
+                      onPress={() => handleLocation(location)}
                       key={index}
                       className={`flex-row items-center border-0 p-3 px-4 mb-1 ${borderClass}`}
                     >
